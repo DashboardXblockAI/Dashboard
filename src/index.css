@@ -1,0 +1,88 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 5 1% 9%;
+    --foreground: 0 0% 100%;
+
+    --card: 26 6% 20%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 5 1% 9%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 269 92% 75%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 26 6% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 26 6% 20%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 269 92% 75%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 26 6% 20%;
+    --input: 26 6% 20%;
+    --ring: 269 92% 75%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 5 1% 9%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 269 92% 75%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 26 6% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 26 6% 20%;
+    --sidebar-ring: 269 92% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+    background: linear-gradient(135deg, #030014 0%, #1A0536 100%);
+    min-height: 100vh;
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(20px);
+    background: rgba(192, 132, 252, 0.1);
+    border: 1px solid rgba(192, 132, 252, 0.2);
+    box-shadow: 0 8px 32px rgba(192, 132, 252, 0.1);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #C084FC 0%, #ffffff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(192, 132, 252, 0.3), 0 0 40px rgba(192, 132, 252, 0.2);
+  }
+
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(192, 132, 252, 0.2);
+  }
+}
